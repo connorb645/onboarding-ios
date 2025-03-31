@@ -10,6 +10,9 @@ import Common
 
 public struct OnboardingData {
     public let title: String
+    public init(title: String) {
+        self.title = title
+    }
 }
 
 public struct OnboardingView: View {
