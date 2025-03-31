@@ -1,0 +1,15 @@
+{
+  "originHash" : "578f32f434379e3dbe382813468b06dfc3ed9f619f0f2b761e7c2745e8c63709",
+  "pins" : [
+    {
+      "identity" : "common-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/connorb645/common-ios.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "f1405671fe00da7838cae792456a774dd06a4e6a"
+      }
+    }
+  ],
+  "version" : 3
+}
