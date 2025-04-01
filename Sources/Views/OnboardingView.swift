@@ -129,7 +129,7 @@ public struct OnboardingView: View {
 }
 
 #Preview {
-    OnboardingView<Text>(
+    OnboardingView(
         backgroundColor: .black,
         foregroundColor: .white,
         data: [.init(
