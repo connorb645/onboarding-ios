@@ -8,14 +8,16 @@
 import SwiftUI
 
 public extension Image {
-    func backgroundImage(opacity: Double) -> some View {
-        self
-            .resizable()
-            .scaledToFill()
-            .frame(maxWidth: .infinity)
-            .clipped()
-            .overlay(content: {
-                Color.black.opacity(opacity)
-            })
+    func backgroundImage(opacity: Double = 0.9) -> AnyView {
+        AnyView(
+            self
+                .resizable()
+                .scaledToFill()
+                .frame(maxWidth: .infinity)
+                .clipped()
+                .overlay(content: {
+                    Color.black.opacity(opacity)
+                })
+        )
     }
 }
