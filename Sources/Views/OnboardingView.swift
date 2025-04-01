@@ -23,7 +23,7 @@ public struct OnboardingData {
     }
 }
 
-public struct OnboardingView<Background: View>: View {
+public struct OnboardingView: View {
 
     private let backgroundColor: Color
     private let foregroundColor: Color
