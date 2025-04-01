@@ -87,6 +87,7 @@ public struct OnboardingView: View {
                     if let subtitle = data[currentIndex].subtitle {
                         Text(subtitle)
                             .font(secondaryFont)
+                            .italic()
                             .multilineTextAlignment(.leading)
                             .foregroundStyle(foregroundColor.opacity(0.8))
                             .fontWeight(.light)
