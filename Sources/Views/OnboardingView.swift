@@ -60,8 +60,11 @@ public struct OnboardingView: View {
     public var body: some View {
         BackgroundView(color: backgroundColor) {
             if let backgroundView = data[currentIndex].backgroundContent {
-                backgroundView
-                    .ignoresSafeArea()
+                GeometryReader { proxy in
+                    backgroundView
+                        .frame(maxWidth: proxy.size.width)
+                        .ignoresSafeArea()
+                }
             }
 //                PlayerView()
 //                    .ignoresSafeArea()
@@ -69,6 +72,7 @@ public struct OnboardingView: View {
 //                    .overlay(Color.black.opacity(0.8))
 //                    .animation(.easeInOut, value: viewModel.showBackgroundVideo)
             VStack {
+                Spacer()
                 VStack(spacing: 32) {
                     Text(data[currentIndex].title)
                         .font(primaryFont)
@@ -93,6 +97,8 @@ public struct OnboardingView: View {
                     }
                 }
 
+                Spacer()
+
                 HStack {
                     Spacer()
                     CircleProgressButton(
@@ -112,6 +118,7 @@ public struct OnboardingView: View {
 
                 }
                 .padding(.horizontal)
+                .zIndex(1)
 
             }
         }
